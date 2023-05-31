@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		827B146D2A226E6B00EF9600 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B146C2A226E6B00EF9600 /* ShopView.swift */; };
+		829F1FD52A1E9E3100C1CFC5 /* ShopoholicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FD42A1E9E3100C1CFC5 /* ShopoholicApp.swift */; };
+		829F1FD72A1E9E3100C1CFC5 /* SignViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FD62A1E9E3100C1CFC5 /* SignViews.swift */; };
+		829F1FD92A1E9E3300C1CFC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829F1FD82A1E9E3300C1CFC5 /* Assets.xcassets */; };
+		829F1FDC2A1E9E3300C1CFC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829F1FDB2A1E9E3300C1CFC5 /* Preview Assets.xcassets */; };
+		829F1FDE2A1E9E3300C1CFC5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FDD2A1E9E3300C1CFC5 /* Persistence.swift */; };
+		829F1FE12A1E9E3300C1CFC5 /* Shopoholic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FDF2A1E9E3300C1CFC5 /* Shopoholic.xcdatamodeld */; };
+		829F1FEB2A1E9E3300C1CFC5 /* ShopoholicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FEA2A1E9E3300C1CFC5 /* ShopoholicTests.swift */; };
+		829F1FF52A1E9E3300C1CFC5 /* ShopoholicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FF42A1E9E3300C1CFC5 /* ShopoholicUITests.swift */; };
+		829F1FF72A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FF62A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift */; };
+		829F20042A1E9E5C00C1CFC5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F20032A1E9E5C00C1CFC5 /* UserData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		829F1FE72A1E9E3300C1CFC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 829F1FC92A1E9E3100C1CFC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 829F1FD02A1E9E3100C1CFC5;
+			remoteInfo = Shopoholic;
+		};
+		829F1FF12A1E9E3300C1CFC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 829F1FC92A1E9E3100C1CFC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 829F1FD02A1E9E3100C1CFC5;
+			remoteInfo = Shopoholic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		827B146C2A226E6B00EF9600 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		829F1FD12A1E9E3100C1CFC5 /* Shopoholic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopoholic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		829F1FD42A1E9E3100C1CFC5 /* ShopoholicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopoholicApp.swift; sourceTree = "<group>"; };
+		829F1FD62A1E9E3100C1CFC5 /* SignViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViews.swift; sourceTree = "<group>"; };
+		829F1FD82A1E9E3300C1CFC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		829F1FDB2A1E9E3300C1CFC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		829F1FDD2A1E9E3300C1CFC5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		829F1FE02A1E9E3300C1CFC5 /* Shopoholic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shopoholic.xcdatamodel; sourceTree = "<group>"; };
+		829F1FE62A1E9E3300C1CFC5 /* ShopoholicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopoholicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		829F1FEA2A1E9E3300C1CFC5 /* ShopoholicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopoholicTests.swift; sourceTree = "<group>"; };
+		829F1FF02A1E9E3300C1CFC5 /* ShopoholicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopoholicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		829F1FF42A1E9E3300C1CFC5 /* ShopoholicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopoholicUITests.swift; sourceTree = "<group>"; };
+		829F1FF62A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopoholicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		829F20032A1E9E5C00C1CFC5 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		829F1FCE2A1E9E3100C1CFC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		829F1FE32A1E9E3300C1CFC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		829F1FED2A1E9E3300C1CFC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		829F1FC82A1E9E3100C1CFC5 = {
+			isa = PBXGroup;
+			children = (
+				829F1FD32A1E9E3100C1CFC5 /* Shopoholic */,
+				829F1FE92A1E9E3300C1CFC5 /* ShopoholicTests */,
+				829F1FF32A1E9E3300C1CFC5 /* ShopoholicUITests */,
+				829F1FD22A1E9E3100C1CFC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		829F1FD22A1E9E3100C1CFC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				829F1FD12A1E9E3100C1CFC5 /* Shopoholic.app */,
+				829F1FE62A1E9E3300C1CFC5 /* ShopoholicTests.xctest */,
+				829F1FF02A1E9E3300C1CFC5 /* ShopoholicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		829F1FD32A1E9E3100C1CFC5 /* Shopoholic */ = {
+			isa = PBXGroup;
+			children = (
+				829F1FD42A1E9E3100C1CFC5 /* ShopoholicApp.swift */,
+				829F1FD62A1E9E3100C1CFC5 /* SignViews.swift */,
+				827B146C2A226E6B00EF9600 /* ShopView.swift */,
+				829F1FD82A1E9E3300C1CFC5 /* Assets.xcassets */,
+				829F1FDD2A1E9E3300C1CFC5 /* Persistence.swift */,
+				829F1FDF2A1E9E3300C1CFC5 /* Shopoholic.xcdatamodeld */,
+				829F1FDA2A1E9E3300C1CFC5 /* Preview Content */,
+				829F20032A1E9E5C00C1CFC5 /* UserData.swift */,
+			);
+			path = Shopoholic;
+			sourceTree = "<group>";
+		};
+		829F1FDA2A1E9E3300C1CFC5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				829F1FDB2A1E9E3300C1CFC5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		829F1FE92A1E9E3300C1CFC5 /* ShopoholicTests */ = {
+			isa = PBXGroup;
+			children = (
+				829F1FEA2A1E9E3300C1CFC5 /* ShopoholicTests.swift */,
+			);
+			path = ShopoholicTests;
+			sourceTree = "<group>";
+		};
+		829F1FF32A1E9E3300C1CFC5 /* ShopoholicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				829F1FF42A1E9E3300C1CFC5 /* ShopoholicUITests.swift */,
+				829F1FF62A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift */,
+			);
+			path = ShopoholicUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		829F1FD02A1E9E3100C1CFC5 /* Shopoholic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 829F1FFA2A1E9E3300C1CFC5 /* Build configuration list for PBXNativeTarget "Shopoholic" */;
+			buildPhases = (
+				829F1FCD2A1E9E3100C1CFC5 /* Sources */,
+				829F1FCE2A1E9E3100C1CFC5 /* Frameworks */,
+				829F1FCF2A1E9E3100C1CFC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shopoholic;
+			productName = Shopoholic;
+			productReference = 829F1FD12A1E9E3100C1CFC5 /* Shopoholic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		829F1FE52A1E9E3300C1CFC5 /* ShopoholicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 829F1FFD2A1E9E3300C1CFC5 /* Build configuration list for PBXNativeTarget "ShopoholicTests" */;
+			buildPhases = (
+				829F1FE22A1E9E3300C1CFC5 /* Sources */,
+				829F1FE32A1E9E3300C1CFC5 /* Frameworks */,
+				829F1FE42A1E9E3300C1CFC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				829F1FE82A1E9E3300C1CFC5 /* PBXTargetDependency */,
+			);
+			name = ShopoholicTests;
+			productName = ShopoholicTests;
+			productReference = 829F1FE62A1E9E3300C1CFC5 /* ShopoholicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		829F1FEF2A1E9E3300C1CFC5 /* ShopoholicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 829F20002A1E9E3300C1CFC5 /* Build configuration list for PBXNativeTarget "ShopoholicUITests" */;
+			buildPhases = (
+				829F1FEC2A1E9E3300C1CFC5 /* Sources */,
+				829F1FED2A1E9E3300C1CFC5 /* Frameworks */,
+				829F1FEE2A1E9E3300C1CFC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				829F1FF22A1E9E3300C1CFC5 /* PBXTargetDependency */,
+			);
+			name = ShopoholicUITests;
+			productName = ShopoholicUITests;
+			productReference = 829F1FF02A1E9E3300C1CFC5 /* ShopoholicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		829F1FC92A1E9E3100C1CFC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					829F1FD02A1E9E3100C1CFC5 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					829F1FE52A1E9E3300C1CFC5 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 829F1FD02A1E9E3100C1CFC5;
+					};
+					829F1FEF2A1E9E3300C1CFC5 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 829F1FD02A1E9E3100C1CFC5;
+					};
+				};
+			};
+			buildConfigurationList = 829F1FCC2A1E9E3100C1CFC5 /* Build configuration list for PBXProject "Shopoholic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 829F1FC82A1E9E3100C1CFC5;
+			productRefGroup = 829F1FD22A1E9E3100C1CFC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				829F1FD02A1E9E3100C1CFC5 /* Shopoholic */,
+				829F1FE52A1E9E3300C1CFC5 /* ShopoholicTests */,
+				829F1FEF2A1E9E3300C1CFC5 /* ShopoholicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		829F1FCF2A1E9E3100C1CFC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				829F1FDC2A1E9E3300C1CFC5 /* Preview Assets.xcassets in Resources */,
+				829F1FD92A1E9E3300C1CFC5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		829F1FE42A1E9E3300C1CFC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		829F1FEE2A1E9E3300C1CFC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		829F1FCD2A1E9E3100C1CFC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				827B146D2A226E6B00EF9600 /* ShopView.swift in Sources */,
+				829F1FDE2A1E9E3300C1CFC5 /* Persistence.swift in Sources */,
+				829F1FD72A1E9E3100C1CFC5 /* SignViews.swift in Sources */,
+				829F1FD52A1E9E3100C1CFC5 /* ShopoholicApp.swift in Sources */,
+				829F20042A1E9E5C00C1CFC5 /* UserData.swift in Sources */,
+				829F1FE12A1E9E3300C1CFC5 /* Shopoholic.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		829F1FE22A1E9E3300C1CFC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				829F1FEB2A1E9E3300C1CFC5 /* ShopoholicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		829F1FEC2A1E9E3300C1CFC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				829F1FF72A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift in Sources */,
+				829F1FF52A1E9E3300C1CFC5 /* ShopoholicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		829F1FE82A1E9E3300C1CFC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 829F1FD02A1E9E3100C1CFC5 /* Shopoholic */;
+			targetProxy = 829F1FE72A1E9E3300C1CFC5 /* PBXContainerItemProxy */;
+		};
+		829F1FF22A1E9E3300C1CFC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 829F1FD02A1E9E3100C1CFC5 /* Shopoholic */;
+			targetProxy = 829F1FF12A1E9E3300C1CFC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		829F1FF82A1E9E3300C1CFC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		829F1FF92A1E9E3300C1CFC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		829F1FFB2A1E9E3300C1CFC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Shopoholic/Preview Content\"";
+				DEVELOPMENT_TEAM = TGD6Z8TH3U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engylizium.Shopoholic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		829F1FFC2A1E9E3300C1CFC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Shopoholic/Preview Content\"";
+				DEVELOPMENT_TEAM = TGD6Z8TH3U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engylizium.Shopoholic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		829F1FFE2A1E9E3300C1CFC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGD6Z8TH3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engylizium.ShopoholicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopoholic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Shopoholic";
+			};
+			name = Debug;
+		};
+		829F1FFF2A1E9E3300C1CFC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGD6Z8TH3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engylizium.ShopoholicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopoholic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Shopoholic";
+			};
+			name = Release;
+		};
+		829F20012A1E9E3300C1CFC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGD6Z8TH3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engylizium.ShopoholicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shopoholic;
+			};
+			name = Debug;
+		};
+		829F20022A1E9E3300C1CFC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGD6Z8TH3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engylizium.ShopoholicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shopoholic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		829F1FCC2A1E9E3100C1CFC5 /* Build configuration list for PBXProject "Shopoholic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				829F1FF82A1E9E3300C1CFC5 /* Debug */,
+				829F1FF92A1E9E3300C1CFC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		829F1FFA2A1E9E3300C1CFC5 /* Build configuration list for PBXNativeTarget "Shopoholic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				829F1FFB2A1E9E3300C1CFC5 /* Debug */,
+				829F1FFC2A1E9E3300C1CFC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		829F1FFD2A1E9E3300C1CFC5 /* Build configuration list for PBXNativeTarget "ShopoholicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				829F1FFE2A1E9E3300C1CFC5 /* Debug */,
+				829F1FFF2A1E9E3300C1CFC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		829F20002A1E9E3300C1CFC5 /* Build configuration list for PBXNativeTarget "ShopoholicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				829F20012A1E9E3300C1CFC5 /* Debug */,
+				829F20022A1E9E3300C1CFC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		829F1FDF2A1E9E3300C1CFC5 /* Shopoholic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				829F1FE02A1E9E3300C1CFC5 /* Shopoholic.xcdatamodel */,
+			);
+			currentVersion = 829F1FE02A1E9E3300C1CFC5 /* Shopoholic.xcdatamodel */;
+			path = Shopoholic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 829F1FC92A1E9E3100C1CFC5 /* Project object */;
+}
