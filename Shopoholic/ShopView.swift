@@ -61,6 +61,7 @@ struct ShopView: View {
     }
 }
 
+//MARK: Shop Grid
 struct TrendingItemsView: View {
     let trendingItems: [Product]
     @State private var selectedTabIndex = 0
@@ -93,6 +94,7 @@ struct TrendingItemsView: View {
     
 }
 
+//MARK: Product Card
 struct ProductCardView: View {
     let product: Product
     @State private var isFavorite = false
@@ -170,11 +172,13 @@ struct ProductCardView: View {
     }
 }
 
+//MARK: DetailView
 struct ProductDetailView: View {
     let product: Product
     @State private var isExpanded = false
     @State private var quantity = 1
     let rating: Double = 1.5
+    let starFontSize: Font? = Font.headline
     
     private let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -185,102 +189,89 @@ struct ProductDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                // Product Image in transparent tab view
-                ZStack {
+                // Image
                     Image(systemName: "photo") // Replace with your product image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(height: UIScreen.main.bounds.height * 0.65)
+                        .frame(height: UIScreen.main.bounds.height * 0.50)
                         .clipped()
-                        .opacity(isExpanded ? 0.5 : 1.0)
-                        .onTapGesture {
-                            isExpanded.toggle()
-                        }
-                    
-                    if isExpanded {
-                        VStack {
-                            Text("More Detailed Information")
-                                .font(.title)
-                                .foregroundColor(.white)
-                                .padding()
-                            // Additional detailed product information
-                            // ...
-                        }
-                        .frame(maxWidth: .infinity)
-                        .background(Color.black.opacity(0.7))
-                    }
-                }
                 
                 // Key Points
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    KeyPointView(imageName: "performance", description: "Best Performance")
-                    KeyPointView(imageName: "megapixels", description: "18 Megapixels")
+                HStack {
+                    KeyPointView(imageName: "cpu", description: "Best Performance")
+                    Spacer()
+                    KeyPointView(imageName: "camera", description: "18 Megapixels")
+                    Spacer()
                     KeyPointView(imageName: "display", description: "OLED Display")
                 }
-                
-                HStack {
-                            VStack(alignment: .leading, spacing: 8) {
+                .padding()
+                    VStack {
+                        VStack {
+                            HStack { // Product name - stars
                                 Text(product.name)
                                     .font(.title3)
                                     .foregroundColor(.black)
                                 
-                                Text(product.description ?? "")
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                            }
-                            
-                            Spacer()
-                            
-                    VStack {
-                                HStack(spacing: 2) { // Adjust spacing between stars here
+                                Spacer()
+                                
+                                
+                                HStack(spacing: 2) { // Rating stack
                                     ForEach(1...5, id: \.self) { index in
                                         if index <= Int(rating) {
                                             Image(systemName: "star.fill")
                                                 .foregroundColor(.black)
-                                                .font(.title3) // Adjust star size here
+                                                .font(starFontSize)
                                         } else if index == Int(rating) + 1 && rating.truncatingRemainder(dividingBy: 1) != 0 {
                                             Image(systemName: "star.leadinghalf.filled")
                                                 .foregroundColor(.black)
-                                                .font(.title3) // Adjust star size here
+                                                .font(starFontSize)
                                         } else {
                                             Image(systemName: "star")
                                                 .foregroundColor(.black)
-                                                .font(.title3) // Adjust star size here
+                                                .font(starFontSize)
                                         }
                                     }
-                                }
+                                } // EOF rating stack
+                                
+                            } // EOF Product name - stars
+                            
+                            HStack { //  Description - Reviews stack
+                                Text(product.description ?? "")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                
+                                Spacer()
+                                
                                 Text("250 Reviews")
                                     .font(.caption)
                                     .foregroundColor(.gray)
-                            }
+                                    .multilineTextAlignment(.trailing)
+                            } // EOF Description - Reviews stack
                         }
-                VStack {
-                    HStack {
-                        if let discountPrice = calculateDiscountedPrice() {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(discountPrice)
-                                    .font(.title)
-                                    .foregroundColor(.black)
-                                
+                        
+                        HStack { // Price - Quantity - Cart button stack
+                            if let discountPrice = calculateDiscountedPrice() {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(discountPrice)
+                                        .font(.title)
+                                        .foregroundColor(.black)
+                                    
+                                    Text(formatPrice(product.price))
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                        .strikethrough()
+                                        .frame(alignment: .trailing)
+                                }
+                            } else {
                                 Text(formatPrice(product.price))
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                                    .strikethrough()
-                                    .frame(alignment: .trailing)
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
                             }
-                        } else {
-                            Text(formatPrice(product.price))
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                        }
-                        
-                        Spacer()
-                        
-                        ZStack(alignment: .center) {
-                            HStack {
-                                Spacer()
-                                
+                            
+                            Spacer()
+                            
+                            HStack { // Quantity stack
                                 Button(action: {
                                     if quantity > 1 {
                                         self.quantity -= 1
@@ -302,33 +293,27 @@ struct ProductDetailView: View {
                                         .font(.title)
                                         .foregroundColor(.black)
                                 }
-                                
-                                Spacer()
                             }
                             .padding()
-                            .alignmentGuide(HorizontalAlignment.center) { _ in
-                                UIScreen.main.bounds.width / 2
-                            }
-                        }
-                        
-                        Button(action: {
-                            // Add to cart button action
-                        }) {
-                            Text("Cart")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.black)
-                                .cornerRadius(10)
-                        }
+                            .alignmentGuide(HorizontalAlignment.center)
+                            { _ in UIScreen.main.bounds.width / 2 }
+                            
+                            Button(action: { /* Add to cart button action */ }) {
+                                Text("Cart")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.black)
+                                    .cornerRadius(10)
+                            } // Button
+                        } // EOF Price - Quantity - Cart button HStack
                     }
-                    
-                    
-                }
-            }
-            .padding()
-        }
-    }
+                    .background(Color.white)
+                    .cornerRadius(20)
+            } // SCREEN VSTACK
+        } // SCROLLVIEW SCREEN
+        .background(Color.gray.opacity(0.2))
+    } // EOF body
     
     private func calculateDiscountedPrice() -> String? {
         guard let discount = product.discount else {
@@ -345,12 +330,13 @@ struct ProductDetailView: View {
     }
 }
 
+//MARK: Key Points
 struct KeyPointView: View {
     let imageName: String
     let description: String
     
     var body: some View {
-        HStack(spacing: 8) {
+        VStack {
             Image(systemName: imageName)
                 .font(.title)
                 .foregroundColor(.blue)
@@ -358,16 +344,18 @@ struct KeyPointView: View {
             Text(description)
                 .font(.subheadline)
                 .foregroundColor(.black)
-            
-            Spacer()
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.5) // Adjust the minimum scale factor as needed
+                .lineLimit(nil)
         }
-        .padding(.horizontal)
-        .padding(.vertical, 8)
-        .background(Color.gray.opacity(0.2))
+        .padding(10)
+        .background(Color.white)
         .cornerRadius(10)
+        .aspectRatio(1, contentMode: .fit)
     }
 }
 
+//MARK: Preview
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
         ShopView()
