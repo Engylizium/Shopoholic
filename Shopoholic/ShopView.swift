@@ -187,7 +187,6 @@ struct ProductDetailView: View {
     }()
     
     var body: some View {
-        ScrollView {
             VStack(spacing: 16) {
                 // Image
                     Image(systemName: "photo") // Replace with your product image
@@ -205,7 +204,9 @@ struct ProductDetailView: View {
                     KeyPointView(imageName: "display", description: "OLED Display")
                 }
                 .padding()
+                
                     VStack {
+                        Spacer()
                         VStack {
                             HStack { // Product name - stars
                                 Text(product.name)
@@ -248,7 +249,6 @@ struct ProductDetailView: View {
                                     .multilineTextAlignment(.trailing)
                             } // EOF Description - Reviews stack
                         }
-                        
                         HStack { // Price - Quantity - Cart button stack
                             if let discountPrice = calculateDiscountedPrice() {
                                 VStack(alignment: .leading, spacing: 4) {
@@ -308,10 +308,10 @@ struct ProductDetailView: View {
                             } // Button
                         } // EOF Price - Quantity - Cart button HStack
                     }
+                    .padding()
                     .background(Color.white)
-                    .cornerRadius(20)
+                    .roundedCorner(40, corners:[.topLeft, . topRight])
             } // SCREEN VSTACK
-        } // SCROLLVIEW SCREEN
         .background(Color.gray.opacity(0.2))
     } // EOF body
     
@@ -354,6 +354,24 @@ struct KeyPointView: View {
         .aspectRatio(1, contentMode: .fit)
     }
 }
+
+//MARK: Customization
+struct RoundedCorner: Shape {
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+    
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+
+extension View {
+    func roundedCorner(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape(RoundedCorner(radius: radius, corners: corners) )
+    }
+}
+
 
 //MARK: Preview
 struct ShopView_Previews: PreviewProvider {
