@@ -61,11 +61,10 @@ struct ShopView: View {
     }
 }
 
-//MARK: Shop Grid
+//MARK: Trending Items
 struct TrendingItemsView: View {
     let trendingItems: [Product]
     @State private var selectedTabIndex = 0
-    @State private var isAutomaticScrolling = true
     private var timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     
     init(trendingItems: [Product]) {
@@ -188,12 +187,12 @@ struct ProductDetailView: View {
     
     var body: some View {
             VStack(spacing: 16) {
-                // Image
-                    Image(systemName: "photo") // Replace with your product image
+                TabView {
+                    Image(uiImage: #imageLiteral(resourceName: "iphone13.png"))
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: UIScreen.main.bounds.height * 0.50)
-                        .clipped()
+                        .aspectRatio(contentMode: .fill)
+                }
+                    .frame(height: UIScreen.main.bounds.height * 0.50)
                 
                 // Key Points
                 HStack {
@@ -311,8 +310,9 @@ struct ProductDetailView: View {
                     .padding()
                     .background(Color.white)
                     .roundedCorner(40, corners:[.topLeft, . topRight])
+                
             } // SCREEN VSTACK
-        .background(Color.gray.opacity(0.2))
+        .background(Color.gray.opacity(0.1))
     } // EOF body
     
     private func calculateDiscountedPrice() -> String? {

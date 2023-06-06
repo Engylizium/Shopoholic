@@ -18,6 +18,7 @@
 		829F1FF52A1E9E3300C1CFC5 /* ShopoholicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FF42A1E9E3300C1CFC5 /* ShopoholicUITests.swift */; };
 		829F1FF72A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F1FF62A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift */; };
 		829F20042A1E9E5C00C1CFC5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F20032A1E9E5C00C1CFC5 /* UserData.swift */; };
+		82D3D7C02A2F9BFC006A422B /* iphone13.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D3D7BF2A2F9BFC006A422B /* iphone13.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		829F1FF42A1E9E3300C1CFC5 /* ShopoholicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopoholicUITests.swift; sourceTree = "<group>"; };
 		829F1FF62A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopoholicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		829F20032A1E9E5C00C1CFC5 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		82D3D7BF2A2F9BFC006A422B /* iphone13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone13.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		829F1FD32A1E9E3100C1CFC5 /* Shopoholic */ = {
 			isa = PBXGroup;
 			children = (
+				82D3D7BE2A2F9B86006A422B /* MockImages */,
 				829F1FD42A1E9E3100C1CFC5 /* ShopoholicApp.swift */,
 				829F1FD62A1E9E3100C1CFC5 /* SignViews.swift */,
 				827B146C2A226E6B00EF9600 /* ShopView.swift */,
@@ -137,6 +140,14 @@
 				829F1FF62A1E9E3300C1CFC5 /* ShopoholicUITestsLaunchTests.swift */,
 			);
 			path = ShopoholicUITests;
+			sourceTree = "<group>";
+		};
+		82D3D7BE2A2F9B86006A422B /* MockImages */ = {
+			isa = PBXGroup;
+			children = (
+				82D3D7BF2A2F9BFC006A422B /* iphone13.png */,
+			);
+			path = MockImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D3D7C02A2F9BFC006A422B /* iphone13.png in Resources */,
 				829F1FDC2A1E9E3300C1CFC5 /* Preview Assets.xcassets in Resources */,
 				829F1FD92A1E9E3300C1CFC5 /* Assets.xcassets in Resources */,
 			);
