@@ -251,7 +251,7 @@ struct SignUpFormView: View {
                 .foregroundColor(.gray)
             
             Button(action: {
-                // Sign up button action
+                //some action
             }) {
                 Text("Sign in")
                     .foregroundColor(.blue)
