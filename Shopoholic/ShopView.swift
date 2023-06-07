@@ -191,7 +191,9 @@ struct ProductDetailView: View {
                     Image(uiImage: #imageLiteral(resourceName: "iphone13.png"))
                         .resizable()
                         .aspectRatio(contentMode: .fill)
+                        .padding()
                 }
+                .tabViewStyle(.page)
                     .frame(height: UIScreen.main.bounds.height * 0.50)
                 
                 // Key Points
@@ -306,13 +308,17 @@ struct ProductDetailView: View {
                                     .cornerRadius(10)
                             } // Button
                         } // EOF Price - Quantity - Cart button HStack
+                        Spacer()
+                            .frame(height: UIScreen.main.bounds.height * 0.04)
                     }
                     .padding()
                     .background(Color.white)
                     .roundedCorner(40, corners:[.topLeft, . topRight])
+                    .ignoresSafeArea()
+                    .frame(maxHeight: .infinity)
                 
             } // SCREEN VSTACK
-        .background(Color.gray.opacity(0.1))
+        .background(Color(red: 232/255, green: 232/255, blue: 234/255))
     } // EOF body
     
     private func calculateDiscountedPrice() -> String? {
@@ -340,17 +346,16 @@ struct KeyPointView: View {
             Image(systemName: imageName)
                 .font(.title)
                 .foregroundColor(.blue)
-            
+
             Text(description)
                 .font(.subheadline)
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.5) // Adjust the minimum scale factor as needed
-                .lineLimit(nil)
+                .minimumScaleFactor(0.5)
         }
         .padding(10)
         .background(Color.white)
-        .cornerRadius(10)
+        .cornerRadius(20)
         .aspectRatio(1, contentMode: .fit)
     }
 }
@@ -371,7 +376,6 @@ extension View {
         clipShape(RoundedCorner(radius: radius, corners: corners) )
     }
 }
-
 
 //MARK: Preview
 struct ShopView_Previews: PreviewProvider {
